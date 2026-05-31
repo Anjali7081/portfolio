@@ -8,13 +8,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
       - name: Install Eleventy
         run: |
-          npm install -g @11ty/eleventy
+          npm install
       - name: Build site with Eleventy
         run: |
-          eleventy --input . --output _site
+          npx eleventy
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
