@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.title }}</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="name contentsection">
+            <h1>{{ profile.title }}</h1>
+        </div>
+        <div class="image">
+            <img src="assets/image2.png" alt="Profile Picture">
+        </div>
+        <div class="profile contentsection">
+            <h2>Profile</h2>
+            <p>{{ profile.profile }}</p>
+        </div>
+
+        <div class="project contentsection">
+            <h2>Projects</h2>
+            {% for project in projects %}
+            <h3>{{ project.name }}</h3>
+            <ul>
+                {% for point in project.bullet_points %}
+                <li>{{ point }}</li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+
+        </div>
+        <div class="language contentsection">
+            <h2>Programming Languages</h2>
+            <ul >
+                {% for language in languages %}
+                <li>{{ language.language }} - {{ language.proficiency }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="platforms contentsection">
+            <h2>Tools & Platforms </h2>
+            <ul>
+                {% assign toolsAndPlatforms = platforms | concat: tools %}
+                {% for item in toolsAndPlatforms %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="link contentsection">
+            <h2>Links</h2>
+            <ul>
+                {% for link in links %}
+                <li>{{ link.type }}: <a href="{{ link.href }}" target="_blank">{{ link.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="contact contentsection">
+            <h2>Contact me</h2>
+            <ul>
+                {% for contact in contacts %}
+                <li>{{ contact.type }}: <a href="{{ contact.href }}" target="_blank">{{ contact.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

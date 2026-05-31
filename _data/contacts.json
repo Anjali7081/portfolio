@@ -1,0 +1,12 @@
+[
+    {
+        "type": "E-mail",
+        "label": "me@anjaliwagaskar.com",
+        "href": "mailto:me@anjaliwagaskar.com"
+    },
+    {
+        "type": "LinkedIn",
+        "label": "linkedin.com/in/anjaliwagaskar",
+        "href": "https://www.linkedin.com/in/anjaliwagaskar/"
+    }
+]
