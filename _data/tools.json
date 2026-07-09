@@ -1,6 +1,6 @@
 [
   "Git",
-  "GitHub Actions",
+  "GitHub Actions (CI/CD)",
   "Docker",
   "AWS CodePipeline (CI/CD)",
   "AWS Lambda",
@@ -8,12 +8,13 @@
   "AWS ECS",
   "AWS API Gateway",
   "AWS Load Balancer",
-  "HashiCorp tools",
   "Open Policy Agent (OPA)",
   "Falco",
   "MinIO",
   "Release Manager",
   "PuTTY",
   "WinSCP",
-  "UiPath"
+  "UiPath",
+  "Terraform",
+  "Ansible"
 ]
